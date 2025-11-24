@@ -1,6 +1,8 @@
-<p align="center">
+# title
+
   <a href="https://getbootstrap.com/">
-    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
+    <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png"
+     alt="Bootstrap logo" width="200" height="165">
   </a>
 </p>
 
@@ -24,13 +26,16 @@
 
 ## Install
 
-Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) for usage instructions.
+Bootstrap Icons are packaged up and published to npm. We only include the
+processed SVGs in this package—it's up to you and your team to implement.
+[Read our docs](https://icons.getbootstrap.com/) for usage instructions.
 
 ```shell
 npm i bootstrap-icons
 ```
 
-For those [using Packagist](https://packagist.org/packages/twbs/bootstrap-icons), you can also install Bootstrap Icons via Composer:
+For those [using Packagist](https://packagist.org/packages/twbs/bootstrap-icons),
+you can also install Bootstrap Icons via Composer:
 
 ```shell
 composer require twbs/bootstrap-icons
@@ -67,29 +72,47 @@ Then open `http://localhost:4000` in your browser.
 
 ### npm scripts
 
-Here are some key scripts you'll use during development. Be sure to look to our `package.json` or `npm run` output for a complete list of scripts.
+Here are some key scripts you'll use during development. Be sure to look to our
+`package.json` or `npm run` output for a complete list of scripts.
 
-| Script       | Description                                                                   |
-|--------------|-------------------------------------------------------------------------------|
-| `start`      | Alias for running `docs-serve`                                                |
-| `docs-serve` | Starts a local Hugo server                                                    |
-| `pages`      | Generates permalink pages for each icon with template Markdown                |
-| `icons`      | Processes and optimizes SVGs in `icons` directory, generates fonts and sprite |
+| Script | Description
+|
+| ------------ | ---------------------------------------------------------------
+-------------- |
+| `start` | Alias for running `docs-serve`
+|
+| `docs-serve` | Starts a local Hugo server
+|
+| `pages` | Generates permalink pages for each icon with template
+Markdown |
+| `icons` | Processes and optimizes SVGs in `icons` directory, generates
+fonts and sprite |
 
 ## Adding SVGs
 
-Icons are typically only added by @mdo, but exceptions can be made. New glyphs are designed in Figma first on a 16x16px grid, then exported as flattened SVGs with `fill` (no stroke). Once a new SVG icon has been added to the `icons` directory, we use an npm script to:
+Icons are typically only added by @mdo, but exceptions can be made. New glyphs
+are designed in Figma first on a 16x16px grid, then exported as flattened SVGs
+with `fill` (no stroke). Once a new SVG icon has been added to the `icons`
+directory, we use an npm script to:
 
 1. Optimize our SVGs with SVGO.
-2. Modify the SVGs source code, removing all attributes before setting new attributes and values in our preferred order.
+2. Modify the SVGs source code, removing all attributes before setting new
+3. attributes and values in our preferred order.
 
-Use `npm run icons` to run the script, run `npm run pages` to build permalink pages, complete those pages, and, finally, commit the results in a new branch for updating.
+Use `npm run icons` to run the script, run `npm run pages` to build permalink
+pages, complete those pages, and, finally, commit the results in a new branch f
+or updating.
 
-**Warning**: Please exclude any auto-generated files, like `font/**` and `bootstrap-icons.svg` from your branch because they cause conflicts, and we generally update the dist files before a release.
+**Warning**: Please exclude any auto-generated files, like `font/**` and
+`bootstrap-icons.svg` from your branch because they cause conflicts, and we
+generally update the dist files before a release.
 
 ## Publishing
 
-Documentation is published automatically when a new Git tag is published. See our [GitHub Actions](https://github.com/twbs/icons/tree/main/.github/workflows) and [`package.json`](https://github.com/twbs/icons/blob/main/package.json) for more information.
+Documentation is published automatically when a new Git tag is published. See
+our [GitHub Actions](https://github.com/twbs/icons/tree/main/.github/workflows)
+and [`package.json`](https://github.com/twbs/icons/blob/main/package.json) for
+more information.
 
 ## License
 
